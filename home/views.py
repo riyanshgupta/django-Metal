@@ -31,7 +31,7 @@ def forms(request):
         'lstofmuscles': lstofmuscles,
         'lstofequipments': lstofequipments,
         'page': "forms",
-        'imglink' : "/static/bgstarted.jpg",
+        'imglink' : "/static/bgstarted.jpg?raw=true",
         'key': session_key
     }
     if request.method == "POST":
