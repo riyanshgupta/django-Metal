@@ -21,7 +21,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "home/wsgi.py"
+        "dest": "Metal/wsgi.py"
       }
     ]
   }
