@@ -35,7 +35,6 @@ def forms(request):
         'key': session_key
     }
     if request.method == "POST":
-        print(request.POST)
         muscle = request.POST.get('muscle')
         equipment=  request.POST.get('equipment')
         if muscles.get(muscle) != None and equipments.get(equipment)!=None:
@@ -68,7 +67,6 @@ def prepare(request):
         try:
             data = json.loads(request.body)
             data = dict(data)
-            print(session_key)
             if data.get('height') == None or data.get('weight')==None or data.get('gender')==None or data.get('activity_level') == None or data.get('age') ==None or data.get('goal') == None:
                 return JsonResponse({'diet-chart'+session_key: "Fill all the values and submit then try again"})
             

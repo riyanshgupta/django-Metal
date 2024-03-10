@@ -9,11 +9,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     {% if page == "home" %}
-      <link rel="stylesheet" href="{% static 'style.css' %}">
+      <link rel="stylesheet" href="https://metal-static.onrender.com/style.css">
     {% elif page == "forms" %}
-      <link rel="stylesheet" href="{% static 'style1.css' %}">
+      <link rel="stylesheet" href="https://metal-static.onrender.com/style1.css">
     {% elif page == "exercise" %}
-      <link rel="stylesheet" href="{% static 'style2.css' %}">
+      <link rel="stylesheet" href="https://metal-static.onrender.com/style2.css">
     {% endif %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
@@ -22,15 +22,15 @@
     {% else %}
     <title>Metal</title>
     {% endif %}
-    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/riyanshgupta/metal-static/main/apple-touch-icon.png?raw=true">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/riyanshgupta/metal-static/main/favicon-32x32.png?raw=true">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/riyanshgupta/metal-static/main/favicon-16x16.png?raw=true">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://metal-static.onrender.comapple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://metal-static.onrender.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://metal-static.onrender.com/favicon-16x16.png">
 </head>
 <body onload="zoom()">
 <nav class="bg-white dark:bg-gray-900 sticky w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 mt-0 -mb-px">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="{% url 'home' %}" class="flex items-center">
-      <img src="https://raw.githubusercontent.com/riyanshgupta/metal-static/main/apple-touch-icon.png?raw=true" class="h-8 mr-3" alt="Metal Logo">
+      <img src="https://metal-static.onrender.com/apple-touch-icon.png" class="h-8 mr-3" alt="Metal Logo">
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Metal</span>
   </a>
   <div class="flex md:order-2">
