@@ -26,3 +26,4 @@ urllib3
 w3lib
 websockets
 zipp
+dj-static
