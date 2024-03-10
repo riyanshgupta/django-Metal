@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%1#6sxkow##pq%xfwo2pw_@3pq90&btke--e&6ddvty=x(uv2z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['vercel.app', '.now.sh', 'localhost']
 
 
 # Application definition
@@ -117,7 +117,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -127,9 +127,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Added Manually
 import os
 STATICFILES_DIRS = [
-    BASE_DIR/"static/"
+    BASE_DIR / "static"
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT=os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 INSTALLED_APPS += [
     'home.apps.HomeConfig'
 ]
+STATIC_ROOT = 'staticdir'
+STATIC_URL = '/staticpath/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
