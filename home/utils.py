@@ -456,3 +456,4 @@ class Bmi:
         your_weight_boundaries = (cls.calculate_weight_boundaries(height_m))[1:3]
         logger.debug("For height: " + str(height_m) + ", your healthy boundaries are: " + str(your_weight_boundaries))
         return your_weight_boundaries
+

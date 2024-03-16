@@ -52,11 +52,19 @@ def exercise(request, slug):
     res = res.json()
     result = {}
     if res.get("results")!=None and len(res.get("results")) > 0:
-        result = {
-            "difficulty": res.get("results")[0].get("difficulty"),
-            "correct_steps": res.get("results")[0].get("correct_steps"),
-            "content": video(res.get("results")[0].get("name"))
-        }
+        content = video(res.get("results")[0].get("name"))
+        if (content==None):
+            result = {
+                "difficulty": res.get("results")[0].get("difficulty"),
+                "correct_steps": res.get("results")[0].get("correct_steps"),
+                "content": "https://www.youtube.com/embed/wvjK5vJlpuI"
+            }
+        else:
+            result = {
+                "difficulty": res.get("results")[0].get("difficulty"),
+                "correct_steps": res.get("results")[0].get("correct_steps"),
+                "content": content
+            }
         return JsonResponse(data={"status":1, 'result': result}, status=200)
         
     else :
