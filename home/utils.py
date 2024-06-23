@@ -1,9 +1,9 @@
 import requests, json
-from requests_html import HTMLSession
+
 from bs4 import BeautifulSoup
 import logging.config
 from os import path
-
+from requests import Session
 logger = logging.getLogger('bmi')
 def sec(time_str:str):
     parts = time_str.split(":")
@@ -21,9 +21,9 @@ def video(name:str):
     url = "https://www.youtube.com/results"
     payloads = { "search_query":name+" @puregym" }
     headers = { "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" }
-    session = HTMLSession()
+    session = Session()
     response = session.get(url=url, headers=headers, params=payloads)
-    html_content = response.html.html
+    html_content = response.text
     session.close()
     soup = BeautifulSoup(html_content,'lxml')
     script_tag = soup.find('script', text=lambda text: text and 'var ytInitialData' in text)

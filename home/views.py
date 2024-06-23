@@ -74,6 +74,7 @@ def prepare(request):
     if request.method == 'POST':
         try:
             data = json.loads(request.body)
+            print(request.headers)
             data = dict(data)
             if data.get('height') == None or data.get('weight')==None or data.get('gender')==None or data.get('activity_level') == None or data.get('age') ==None or data.get('goal') == None:
                 return JsonResponse({'diet-chart'+session_key: "Fill all the values and submit then try again"})
