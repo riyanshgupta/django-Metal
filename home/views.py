@@ -110,6 +110,8 @@ def calculate(request):
             # Decode the JSON data sent in the request body
             data = json.loads(request.body)
             data = dict(data)
+            print("from headers: ", request.headers)
+            print("session_key: ", session_key)
             bmi = Bmi.calculate_bmi_with_info(data['weight'], data['height'] / 100, "en")
             calories = calculate_calorie_needs(age=data.get('age'), weight=data.get('weight'),
                                           target_weight=data.get('target_weight'),
