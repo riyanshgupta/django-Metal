@@ -19,6 +19,9 @@ Metal is a Flask web application designed to assist users with their fitness jou
 - Javascript
 - Beautiful Soup
 - Django
+- TailwindCSS
+- CSS
+- HTML
 
 ## Setup Instructions ⚙️
 
