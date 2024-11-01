@@ -7,7 +7,7 @@ from .utils import *
 session_key = secrets.token_hex(32)
 
 def bard(data):
-    key="AIzaSyCxa5DEoAezgHi6POcFvDeRoBxPWfHrN6Y"
+    key=""
     url = f"https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key={key}"
     headers = {"Content-Type": "application/json"}
     data = {"prompt": {"text": f"My height is {data.get('height')}cm, current weight is {data.get('weight')}kg, gender is {data.get('gender')}, activity level is {data.get('activity_level')}, age is {data.get('age')} and want to {data.get('goal')} weight so prepare a Detailed diet chart for me. Don't give me calories intake or macronutrients"}}
